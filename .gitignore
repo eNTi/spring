@@ -158,3 +158,21 @@ Spring.VC.VC.opendb
 /rapid
 /packages
 
+rts/lib/gflags/gflags-config-install.cmake
+rts/lib/gflags/gflags-config-version.cmake
+rts/lib/gflags/gflags-config.cmake
+rts/lib/gflags/gflags-targets.cmake
+rts/lib/gflags/include/gflags/config.h
+rts/lib/gflags/include/gflags/gflags_completions.h
+rts/lib/gflags/include/gflags/gflags_declare.h
+rts/lib/gflags/include/gflags/gflags_gflags.h
+rts/lib/gflags/include/gflags/gflags.h
+rts/lib/libcpuid/libcpuid.pc
+rts/lib/libcpuid/libcpuid/generated/cpuidConfig.cmake
+rts/lib/libcpuid/libcpuid/generated/cpuidConfigVersion.cmake
+rts/lib/meshoptimizer/meshoptimizerConfig.cmake
+rts/lib/meshoptimizer/meshoptimizerConfigVersion.cmake
+tools/pr-downloader
+tools/pr-downloader
+spring.code-workspace
+install_manifest.txt

@@ -22,7 +22,7 @@ end
 
 ------------------------------------------
 
-local font = gl.LoadFont("FreeSansBold.otf", 50, 20, 1.95)
+local font = gl.LoadFont("cont/fonts/FreeSansBold.otf", 50, 20, 1.95)
 
 function addon.DrawLoadScreen()
 	local loadProgress = SG.GetLoadProgress()

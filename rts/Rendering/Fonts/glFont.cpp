@@ -20,8 +20,8 @@
 
 #undef GetCharWidth // winapi.h
 
-CONFIG(std::string,      FontFile).defaultValue("fonts/FreeSansBold.otf").description("Sets the font of Spring engine text.");
-CONFIG(std::string, SmallFontFile).defaultValue("fonts/FreeSansBold.otf").description("Sets the font of Spring engine small text.");
+CONFIG(std::string,      FontFile).defaultValue("cont/fonts/FreeSansBold.otf").description("Sets the font of Spring engine text.");
+CONFIG(std::string, SmallFontFile).defaultValue("cont/fonts/FreeSansBold.otf").description("Sets the font of Spring engine small text.");
 
 CONFIG(int,      FontSize).defaultValue(23).description("Sets the font size (in pixels) of the MainMenu and more.");
 CONFIG(int, SmallFontSize).defaultValue(14).description("Sets the font size (in pixels) of the engine GUIs and more.");
@@ -56,8 +56,8 @@ bool CglFont::LoadConfigFonts()
 	spring::SafeDelete(font);
 	spring::SafeDelete(smallFont);
 
-	font = CglFont::LoadFont("", false);
-	smallFont = CglFont::LoadFont("", true);
+	font = CglFont::LoadFont("/home//nt//dev//spring//cont//fonts//FreeSansBold.otf", false);
+	smallFont = CglFont::LoadFont("//home//nt//dev//spring//cont//fonts//FreeSansBold.otf", true);
 
 	if (font == nullptr)
 		throw content_error("Failed to load FontFile \"" + configHandler->GetString("FontFile") + "\", did you forget to run make install?");
@@ -89,7 +89,7 @@ bool CglFont::LoadCustomFonts(const std::string& smallFontFile, const std::strin
 CglFont* CglFont::LoadFont(const std::string& fontFileOverride, bool smallFont)
 {
 	const std::string fontFiles[] = {configHandler->GetString("FontFile"), configHandler->GetString("SmallFontFile")};
-	const std::string& fontFile = (fontFileOverride.empty())? fontFiles[smallFont]: fontFileOverride;
+	const std::string& fontFile = fontFileOverride.empty() ? fontFiles[smallFont] : fontFileOverride;
 
 	const   int fontSizes[] = {configHandler->GetInt("FontSize"), configHandler->GetInt("SmallFontSize")};
 	const   int fontWidths[] = {configHandler->GetInt("FontOutlineWidth"), configHandler->GetInt("SmallFontOutlineWidth")};
